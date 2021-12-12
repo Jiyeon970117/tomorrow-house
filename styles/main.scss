@@ -1,5 +1,3 @@
-p{
-    color: yellow;
-    font-size: 18px;
-    background-color: red;
-}
+@import './base/font';
+@import './base/normalize';
+@import './base/reset';
