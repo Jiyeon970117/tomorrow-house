@@ -1,0 +1,24 @@
+$flex-map: (
+  start: flex-start,
+  end: flex-end,
+  between: space-between,
+  around: space-around,
+  center: center,
+);
+
+@function get-flex-value($key) {
+  @return map-get($flex-map, $key);
+}
+
+@mixin flexbox($jc: center, $ai: center) {
+  display: flex;
+  justify-content: et-flex-value($jc);
+  align-items: get-flex-value($ai);
+}
+
+@mixin column-flexbox($jc: center, $ai: center) {
+  display: flex;
+  flex-direction: column;
+  justify-content: et-flex-value($jc);
+  align-items: get-flex-value($ai);
+}
